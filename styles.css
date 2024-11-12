@@ -1,0 +1,208 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #9170B8;
+    --text-color: #333;
+    --secondary-text: #666;
+    --border-color: #ccc;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* Typography */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.mission {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-text);
+}
+
+/* Form styles */
+.signup-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 2rem;
+}
+
+.signup-form input[type="email"] {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.signup-form input[type="email"]:focus:valid {
+    border-color: #4CAF50;
+}
+
+.signup-form input[type="email"]:focus:invalid {
+    border-color: #f44336;
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.signup-form button:hover {
+    opacity: 0.9;
+}
+
+.form-disclosure {
+    font-size: 0.75rem;
+    color: var(--secondary-text);
+    margin-top: 0.75rem;
+}
+
+/* Connect section */
+.connect {
+    margin-top: 2rem;
+}
+
+.connect h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.connect ul {
+    list-style: none;
+    padding: 0;
+}
+
+.connect li {
+    margin-bottom: 0.5rem;
+}
+
+.connect a, .attribution a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.connect a:hover, .attribution a:hover {
+    text-decoration: underline;
+}
+
+.attribution {
+    font-size: 0.875rem;
+    color: var(--secondary-text);
+    margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .mission {
+        font-size: 1rem;
+    }
+}
+
+/* Add this after the Connect section styles */
+
+.attribution {
+    margin-top: 3rem;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.attribution a {
+    color: #666;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.attribution a:hover {
+    border-color: #666;
+}
+
+/* Thank you page specific styles */
+.thank-you {
+    text-align: center;
+}
+
+.confirmation-message {
+    font-size: 1.25rem;
+    margin: 2rem 0;
+}
+
+.next-steps {
+    margin: 3rem 0;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.next-steps ul {
+    list-style: none;
+    padding: 0;
+}
+
+.next-steps li {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.next-steps li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color, #4A90E2);
+}
+
+.button-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-color, #4A90E2);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.button-link:hover {
+    background-color: var(--accent-color-dark, #357ABD);
+}
+
+.return-home {
+    margin: 3rem 0;
+} 
