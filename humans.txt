@@ -1,0 +1,11 @@
+/* TEAM */
+    Creator: Kai Davis
+    Contact: kai@doubleyourecommerce.com
+    Website: https://kaidavis.com
+    From: Portland, Oregon, USA
+
+/* SITE */
+    Last update: 2024/03/19
+    Language: English
+    Doctype: HTML5
+    IDE: VS Code 
