@@ -6,16 +6,16 @@
 }
 
 :root {
-    --primary: #7C3AED;
-    --primary-dark: #6D28D9;
-    --primary-light: #EDE9FE;
+    --primary: #157a50;
+    --primary-dark: #116340;
+    --primary-light: #e6f4ed;
     --text: #1F2937;
     --text-secondary: #6B7280;
     --bg: #FFFFFF;
     --bg-alt: #F9FAFB;
     --bg-dark: #111827;
     --border: #E5E7EB;
-    --radius: 8px;
+    --radius: 6px;
 }
 
 body {
@@ -28,7 +28,7 @@ body {
 
 /* ── Hero ── */
 .hero {
-    background: linear-gradient(135deg, #7C3AED 0%, #4F46E5 100%);
+    background: #157a50;
     color: #fff;
     text-align: center;
     padding: 6rem 1.5rem 5rem;
@@ -54,6 +54,7 @@ body {
     line-height: 1.1;
     margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
+    text-wrap: balance;
 }
 
 .hero h1 em {
@@ -96,10 +97,10 @@ body {
     text-align: center;
     margin-bottom: 1rem;
     letter-spacing: -0.01em;
+    text-wrap: balance;
 }
 
 .section p {
-    text-align: center;
     color: var(--text-secondary);
     font-size: 1.0625rem;
     line-height: 1.7;
@@ -111,6 +112,7 @@ body {
 }
 
 .section-sub {
+    text-align: center;
     margin-bottom: 2rem !important;
 }
 
@@ -171,6 +173,21 @@ body {
 
 .form-row button:active {
     transform: scale(0.98);
+}
+
+.form-row button:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.connect-link:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.footer-attribution a:focus-visible {
+    outline: 1px solid #fff;
+    outline-offset: 2px;
 }
 
 .form-disclosure {
@@ -329,6 +346,13 @@ body {
 
 @keyframes spin {
     to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 /* ── Thank You page ── */
