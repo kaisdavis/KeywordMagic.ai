@@ -6,284 +6,302 @@
 }
 
 :root {
-    --primary-color: #9170B8;
-    --text-color: #333;
-    --secondary-text: #666;
-    --border-color: #ccc;
+    --primary: #7C3AED;
+    --primary-dark: #6D28D9;
+    --primary-light: #EDE9FE;
+    --text: #1F2937;
+    --text-secondary: #6B7280;
+    --bg: #FFFFFF;
+    --bg-alt: #F9FAFB;
+    --bg-dark: #111827;
+    --border: #E5E7EB;
+    --radius: 8px;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
-    margin: 0;
-    padding: 20px;
-    background-color: #f5f5f5;
+    color: var(--text);
+    background-color: var(--bg);
+    -webkit-font-smoothing: antialiased;
 }
 
-.container {
-    max-width: 600px;
-    margin: 40px auto;
+/* ── Hero ── */
+.hero {
+    background: linear-gradient(135deg, #7C3AED 0%, #4F46E5 100%);
+    color: #fff;
     text-align: center;
+    padding: 6rem 1.5rem 5rem;
 }
 
-/* Typography */
-h1 {
-    font-size: 2.5rem;
+.hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.hero-eyebrow {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 1.25rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
     margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
 }
 
-.mission {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    color: var(--secondary-text);
+.hero h1 em {
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.4);
+    text-underline-offset: 6px;
+    text-decoration-thickness: 3px;
 }
 
-/* Form styles */
-.signup-form {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto 2rem;
+.hero-sub {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 540px;
+    margin: 0 auto;
 }
 
-.signup-form input[type="email"] {
-    width: 100%;
-    padding: 12px 16px;
+/* ── Sections ── */
+.section {
+    padding: 5rem 1.5rem;
+}
+
+.section--alt {
+    background-color: var(--bg-alt);
+}
+
+.section-inner {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.section-narrow {
+    max-width: 640px;
+}
+
+.section h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
     margin-bottom: 1rem;
-    border: 2px solid var(--border-color);
-    border-radius: 8px;
+    letter-spacing: -0.01em;
+}
+
+.section p {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+}
+
+.section p:last-child {
+    margin-bottom: 0;
+}
+
+.section-sub {
+    margin-bottom: 2rem !important;
+}
+
+/* ── Signup Form ── */
+.signup-form {
+    margin-top: 2rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 0.75rem;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.form-row input[type="email"] {
+    flex: 1;
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
     font-size: 1rem;
-    box-sizing: border-box;
+    font-family: inherit;
+    background: #fff;
+    transition: border-color 0.2s;
 }
 
-.signup-form input[type="email"]:focus:valid {
-    border-color: #4CAF50;
+.form-row input[type="email"]:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-light);
 }
 
-.signup-form input[type="email"]:focus:invalid {
-    border-color: #f44336;
+.form-row input[type="email"]:focus:valid {
+    border-color: #10B981;
 }
 
-.signup-form button {
-    width: 100%;
-    padding: 12px 24px;
-    background-color: var(--primary-color);
-    color: white;
+.form-row input[type="email"]:focus:invalid {
+    border-color: #EF4444;
+}
+
+.form-row button {
+    padding: 0.875rem 1.75rem;
+    background-color: var(--primary);
+    color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--radius);
     font-size: 1rem;
     font-weight: 600;
+    font-family: inherit;
     cursor: pointer;
-    transition: opacity 0.2s ease;
+    white-space: nowrap;
+    transition: background-color 0.2s, transform 0.1s;
 }
 
-.signup-form button:hover {
-    opacity: 0.9;
+.form-row button:hover {
+    background-color: var(--primary-dark);
+}
+
+.form-row button:active {
+    transform: scale(0.98);
 }
 
 .form-disclosure {
-    font-size: 0.75rem;
-    color: var(--secondary-text);
+    text-align: center;
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
     margin-top: 0.75rem;
 }
 
-/* Connect section */
-.connect {
-    margin-top: 2rem;
+/* ── Connect ── */
+.connect-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
-.connect h2 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+.connect-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+    width: 100%;
+    max-width: 380px;
+    justify-content: center;
 }
 
-.connect ul {
-    list-style: none;
-    padding: 0;
+.connect-link:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: var(--primary-light);
 }
 
-.connect li {
+.connect-icon {
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+}
+
+.connect-link:hover .connect-icon {
+    color: var(--primary);
+}
+
+/* ── Footer ── */
+.footer {
+    background: var(--bg-dark);
+    color: #9CA3AF;
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.footer-inner {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.75rem;
+}
+
+.footer-attribution {
+    font-size: 0.9375rem;
     margin-bottom: 0.5rem;
 }
 
-.connect a, .attribution a {
-    color: var(--primary-color);
+.footer-attribution a {
+    color: #D1D5DB;
     text-decoration: none;
+    border-bottom: 1px solid #4B5563;
+    transition: color 0.2s, border-color 0.2s;
 }
 
-.connect a:hover, .attribution a:hover {
-    text-decoration: underline;
+.footer-attribution a:hover {
+    color: #fff;
+    border-color: #fff;
 }
 
-.attribution {
-    font-size: 0.875rem;
-    color: var(--secondary-text);
-    margin-top: 2rem;
+.footer-copy {
+    font-size: 0.8125rem;
+    margin-top: 1rem;
+    color: #6B7280;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .container {
-        padding: 1rem;
-        margin: 20px auto;
+/* ── Responsive ── */
+@media (max-width: 640px) {
+    .hero {
+        padding: 4rem 1.25rem 3.5rem;
     }
 
-    h1 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
+    .hero h1 {
+        font-size: 2.5rem;
     }
 
-    .mission {
-        font-size: 1rem;
-        padding: 0 1rem;
-        margin-bottom: 1.5rem;
+    .hero-sub {
+        font-size: 1.0625rem;
     }
 
-    .signup-form {
-        padding: 0 1rem;
+    .section {
+        padding: 3.5rem 1.25rem;
     }
 
-    .signup-form input[type="email"],
-    .signup-form button {
-        padding: 10px 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
+    .section h2 {
+        font-size: 1.5rem;
     }
 
-    .container {
-        padding: 0.5rem;
+    .form-row {
+        flex-direction: column;
     }
 
-    h1 {
-        font-size: 1.75rem;
+    .form-row button {
+        width: 100%;
     }
 
-    .connect h2 {
-        font-size: 1.1rem;
-    }
-
-    .connect li {
-        margin-bottom: 0.75rem;
-    }
-
-    .form-disclosure {
-        font-size: 0.7rem;
-        padding: 0 1rem;
-    }
-
-    .attribution {
-        font-size: 0.8rem;
-        padding: 0 1rem;
+    .connect-link {
+        max-width: 100%;
     }
 }
 
-/* Add support for larger phones */
-@media (min-width: 481px) and (max-width: 767px) {
-    .container {
-        padding: 1rem;
-        margin: 30px auto;
-    }
-
-    h1 {
-        font-size: 2.25rem;
-    }
-}
-
-/* Adjust for landscape orientation on mobile */
-@media (max-height: 480px) and (orientation: landscape) {
-    .container {
-        margin: 10px auto;
-    }
-
-    h1 {
-        margin-bottom: 0.75rem;
-    }
-
-    .mission {
-        margin-bottom: 1rem;
-    }
-
-    .signup-form {
-        margin-bottom: 1rem;
-    }
-}
-
-/* Add this after the Connect section styles */
-
-.attribution {
-    margin-top: 3rem;
-    font-size: 0.875rem;
-    color: #666;
-}
-
-.attribution a {
-    color: #666;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.attribution a:hover {
-    border-color: #666;
-}
-
-/* Thank you page specific styles */
-.thank-you {
-    text-align: center;
-}
-
-.confirmation-message {
-    font-size: 1.25rem;
-    margin: 2rem 0;
-}
-
-.next-steps {
-    margin: 3rem 0;
-    text-align: left;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.next-steps ul {
-    list-style: none;
-    padding: 0;
-}
-
-.next-steps li {
-    margin: 1rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.next-steps li:before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: var(--accent-color, #4A90E2);
-}
-
-.button-link {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--accent-color, #4A90E2);
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
-}
-
-.button-link:hover {
-    background-color: var(--accent-color-dark, #357ABD);
-}
-
-.return-home {
-    margin: 3rem 0;
-}
-
-/* Add these to your existing styles */
+/* ── Form states ── */
 .signup-form button[disabled] {
     opacity: 0.7;
     cursor: not-allowed;
@@ -301,6 +319,8 @@ h1 {
     top: 50%;
     width: 20px;
     height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
     border: 2px solid #fff;
     border-radius: 50%;
     border-top-color: transparent;
@@ -309,4 +329,57 @@ h1 {
 
 @keyframes spin {
     to { transform: rotate(360deg); }
-} 
+}
+
+/* ── Thank You page ── */
+.thank-you {
+    text-align: center;
+}
+
+.confirmation-message {
+    font-size: 1.25rem;
+    margin: 2rem 0;
+}
+
+.next-steps {
+    margin: 3rem auto;
+    text-align: left;
+    max-width: 600px;
+}
+
+.next-steps ul {
+    list-style: none;
+    padding: 0;
+}
+
+.next-steps li {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.next-steps li::before {
+    content: "\2192";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+}
+
+.button-link {
+    display: inline-block;
+    padding: 0.875rem 1.75rem;
+    background-color: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: var(--radius);
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.button-link:hover {
+    background-color: var(--primary-dark);
+}
+
+.return-home {
+    margin: 3rem 0;
+}
